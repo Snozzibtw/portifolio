@@ -3,8 +3,3 @@ document.querySelectorAll('.flag').forEach(flag => {
         flag.classList.toggle('clicked');
     });
 });
-
-AOS.init({
-    duration: 1000,
-    once: true,
-});
