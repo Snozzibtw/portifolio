@@ -29,20 +29,23 @@
             </a>
         </div>
         <div class="music-button-container">
-            <button  class="music-button" onclick="document.getElementById('bg-music').play()">
-                <i class="fas fa-play"></i>
+            <button class="music-button" onclick="playbackMusic()">
+                <i class="fa-solid fa-backward"></i>
             </button>
-            <button class="music-button"  onclick="pauseMusic()">
-                <i class="fas fa-pause"></i>
+            <button class="music-button" id="playPauseButton" onclick="togglePlayPause()">
+                <i class="fas fa-play" id="playIcon"></i>
+                <i class="fas fa-pause" id="pauseIcon" style="display:none;"></i>
             </button>
-            <button class="music-button" onclick="stopMusic()">
-                <i class="fas fa-stop"></i>
+            <button class="music-button" onclick="skipMusic()">
+                <i class="fa-solid fa-forward"></i>
             </button>
 
             <select id="songSelector" onchange="changeSong()">
-                <option value="music/song1.mp3">Solo - Myles Smith</option>
-                <option value="music/song2.mp3">Blink Twice - Shaboozey, Myles Smith</option>
-                <option value="music/song3.mp3">Song 3</option>
+                <option value="music/song1.mp3">Solo</option>
+                <option value="music/song2.mp3">Blink Twice</option>
+                <option value="music/song3.mp3">Forever Love</option>
+                <option value="music/song4.mp3">Girls Like Girls</option>
+                <option value="music/song5.mp3">Unforgettable</option>
             </select>
 
             
