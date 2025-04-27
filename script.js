@@ -71,3 +71,15 @@ document.querySelectorAll('.flag').forEach(flag => {
 // volumeSlider.addEventListener('input', function() {
 //     music.volume = this.value;
 // });
+
+window.addEventListener("load", function() {
+    setTimeout(function() {
+      const loader = document.getElementById("loader");
+      loader.style.opacity = 0;
+      setTimeout(function() {
+        loader.style.display = "none";
+        document.getElementById("content").style.display = "block";
+      }, 500); // match the CSS transition duration
+    }, 2500); // keeps the logo for 2.5 seconds
+});
+  
