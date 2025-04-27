@@ -63,11 +63,16 @@ body {
 header {
     text-align: center;
     line-height: 2rem;
-    background-image: url(images/resized_fullscreen_image.png);
+    background-image: url(https://wallpapers.com/images/hd/cartoon-space-background-2ygqr1714ju2aix6.jpg);
     height: 50vh;
     width: 100%;
     padding-top: 4rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-clip: content-box;
 }
+
 
 .header-image {
     display: flex;
@@ -217,11 +222,28 @@ label[for="volumeSlider"] {
     .aboutme {
         height: 130vh;
     }
+    .aboutme-p {
+        pad: 0 2rem;
+    }
 }
 
 .aboutme h3 {
     padding-top: 4rem;
     color: var(--text-color);
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.aboutme h3::after {
+    content: '';
+    position: absolute;
+    width: 6rem;
+    height: 6px;
+    background-color: var(--primary-hover);
+    bottom: -5px;
+    left: 50%;
+    border-radius: 5px;
+    transform: translateX(-50%);
 }
 
 .aboutme-p {
@@ -231,12 +253,69 @@ label[for="volumeSlider"] {
     color: var(--subtext-color);
 }
 
-.aboutme-grid-container {
+.skill-container-overview {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 2rem;
+}
+  
+.skill {
+    margin-bottom: 20px;
+    background-color: var(--background-color);
+    padding: 2rem 4rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform var(--animation-duration) var(--animation-ease);
+}
+
+@media only screen and (max-width: 825px) {
+    .skill-container-overview {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 4rem;
+    }
+}
+  
+.skill span {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+  
+.skill-bar {
+    background-color: var(--border-color);
+    height: 10px;
+    width: 12rem;
+    border-radius: 5px;
+}
+  
+.skill-fill {
+    background: var(--primary-color);
+    height: 100%;
+    border-radius: 5px;
+}
+
+.skill-bar p {
+    text-align: right;
+    font-size: 12px;
+    margin-top: 0.3rem;
+    color: var(--subtext-color);
+}
+
+/* .aboutme-grid-container {
     margin-top: 2rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     max-width: 900px;
     gap: 4rem;
+}
+
+.aboutme-grid-item {
+    border: 2px solid var(--border-color);
+    padding: 2rem 2rem;
+    border-radius: 8px;
+    background-color: var(--background-color);
+    transition: transform var(--animation-duration) var(--animation-ease);
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 825px) {
@@ -252,15 +331,6 @@ label[for="volumeSlider"] {
     }
 }
 
-.aboutme-grid-item {
-    border: 2px solid var(--border-color);
-    padding: 2rem 2rem;
-    border-radius: 8px;
-    background-color: var(--background-color);
-    transition: transform var(--animation-duration) var(--animation-ease);
-    cursor: pointer;
-}
-
 .aboutme-grid-item p {
     padding-top: 1rem;
 }
@@ -272,7 +342,7 @@ label[for="volumeSlider"] {
 .aboutme-grid-item p {
     font-size: 12px;
     color: var(--subtext-color);
-}
+} */
 
 .country-flag {
     display: flex;
@@ -336,7 +406,10 @@ label[for="volumeSlider"] {
     padding-top: 2rem;
     font-size: 2rem;
     color: var(--text-color);
+    position: relative;
 }
+
+
 
 .projects-container {
     display: grid;
@@ -547,3 +620,4 @@ ul a {
 ul a:hover {
     text-decoration: underline;
 }
+  

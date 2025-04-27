@@ -4,70 +4,70 @@ document.querySelectorAll('.flag').forEach(flag => {
     });
 });
 
-function togglePlayPause() {
-    const music = document.getElementById('bg-music');
-    const playButton = document.getElementById('playPauseButton');
-    const playIcon = playButton.querySelector('.fa-play');
-    const pauseIcon = playButton.querySelector('.fa-pause');
+// function togglePlayPause() {
+//     const music = document.getElementById('bg-music');
+//     const playButton = document.getElementById('playPauseButton');
+//     const playIcon = playButton.querySelector('.fa-play');
+//     const pauseIcon = playButton.querySelector('.fa-pause');
 
-    if (music.paused) {
-        // Play the music
-        music.play();
-        // Change the icon to pause
-        playIcon.style.display = 'none';
-        pauseIcon.style.display = 'inline-block';
-    } else {
-        // Pause the music
-        music.pause();
-        // Change the icon to play
-        playIcon.style.display = 'inline-block';
-        pauseIcon.style.display = 'none';
-    }
-}
+//     if (music.paused) {
+//         // Play the music
+//         music.play();
+//         // Change the icon to pause
+//         playIcon.style.display = 'none';
+//         pauseIcon.style.display = 'inline-block';
+//     } else {
+//         // Pause the music
+//         music.pause();
+//         // Change the icon to play
+//         playIcon.style.display = 'inline-block';
+//         pauseIcon.style.display = 'none';
+//     }
+// }
 
-function changeSong() {
-    const music = document.getElementById('bg-music');
-    const selector = document.getElementById('songSelector');
+// function changeSong() {
+//     const music = document.getElementById('bg-music');
+//     const selector = document.getElementById('songSelector');
 
-    music.src = selector.value;
-    music.play();
-}
+//     music.src = selector.value;
+//     music.play();
+// }
 
-function skipMusic() {
-    const music = document.getElementById('bg-music');
-    const songSelector = document.getElementById('songSelector');
+// function skipMusic() {
+//     const music = document.getElementById('bg-music');
+//     const songSelector = document.getElementById('songSelector');
 
-    const currentIndex = songSelector.selectedIndex;
-    const nextIndex = (currentIndex + 1) % songSelector.options.length;
+//     const currentIndex = songSelector.selectedIndex;
+//     const nextIndex = (currentIndex + 1) % songSelector.options.length;
 
-    songSelector.selectedIndex = nextIndex;
-    music.src = songSelector.options[nextIndex].value;
-    music.play();
-}
+//     songSelector.selectedIndex = nextIndex;
+//     music.src = songSelector.options[nextIndex].value;
+//     music.play();
+// }
 
-function playbackMusic() {
-    const music = document.getElementById('bg-music');
-    const songSelector = document.getElementById('songSelector');
+// function playbackMusic() {
+//     const music = document.getElementById('bg-music');
+//     const songSelector = document.getElementById('songSelector');
 
-    const currentIndex = songSelector.selectedIndex;
+//     const currentIndex = songSelector.selectedIndex;
 
-    if (currentIndex == 0) {
-        console.log("No previous songs");
-        return;
-    }
+//     if (currentIndex == 0) {
+//         console.log("No previous songs");
+//         return;
+//     }
 
-    const nextIndex = (currentIndex - 1) % songSelector.options.length;
+//     const nextIndex = (currentIndex - 1) % songSelector.options.length;
 
-    songSelector.selectedIndex = nextIndex;
-    music.src = songSelector.options[nextIndex].value;
-    music.play();
-}   
+//     songSelector.selectedIndex = nextIndex;
+//     music.src = songSelector.options[nextIndex].value;
+//     music.play();
+// }   
 
-// Volume control function
-const volumeSlider = document.getElementById('volumeSlider');
-const music = document.getElementById('bg-music');
+// // Volume control function
+// const volumeSlider = document.getElementById('volumeSlider');
+// const music = document.getElementById('bg-music');
 
-// Update volume when slider value changes
-volumeSlider.addEventListener('input', function() {
-    music.volume = this.value;
-});
+// // Update volume when slider value changes
+// volumeSlider.addEventListener('input', function() {
+//     music.volume = this.value;
+// });
