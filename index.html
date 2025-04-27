@@ -28,6 +28,29 @@
             </button>
             </a>
         </div>
+        <div class="music-button-container">
+            <button  class="music-button" onclick="document.getElementById('bg-music').play()">
+                <i class="fas fa-play"></i>
+            </button>
+            <button class="music-button"  onclick="pauseMusic()">
+                <i class="fas fa-pause"></i>
+            </button>
+            <button class="music-button" onclick="stopMusic()">
+                <i class="fas fa-stop"></i>
+            </button>
+
+            <select id="songSelector" onchange="changeSong()">
+                <option value="music/song1.mp3">Solo - Myles Smith</option>
+                <option value="music/song2.mp3">Blink Twice - Shaboozey, Myles Smith</option>
+                <option value="music/song3.mp3">Song 3</option>
+            </select>
+
+            
+            <audio id="bg-music" autoplay loop>
+                <source id="audioSource" src="music/song1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>      
     </header>
 
 <section class="main-content">
@@ -158,7 +181,7 @@
     </div>
 
     <script src="script.js"></script>
-    
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </body>
 </html>

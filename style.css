@@ -102,10 +102,59 @@ header {
     transition: background-color var(--animation-duration) var(--animation-ease), transform var(--animation-duration) var(--animation-ease);
 }
 
+.music-button-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transform: scale(0.85); /* shrink the whole container slightly */
+}
+
+.music-button {
+    padding: 10px 20px;
+    background-color: var(--button-background);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--button-text-color);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.music-button:hover {
+    background-color: var(--button-hover-background);
+    transform: scale(1.05);
+}
+
+#songSelector {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: var(--button-background);
+    color: var(--button-text-color);
+    padding: 10px 30px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 011.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.25 8.27a.75.75 0 01-.02-1.06z" clip-rule="evenodd" /></svg>');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1rem;
+}
+
 .custom-button:hover {
     transform: translateY(var(--translate-y));
 }
-
 
 .main-content {
     text-align: center;
