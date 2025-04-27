@@ -39,7 +39,7 @@
             <button class="music-button" onclick="skipMusic()">
                 <i class="fa-solid fa-forward"></i>
             </button>
-
+        
             <select id="songSelector" onchange="changeSong()">
                 <option value="music/song1.mp3">Solo</option>
                 <option value="music/song2.mp3">Blink Twice</option>
@@ -47,13 +47,16 @@
                 <option value="music/song4.mp3">Girls Like Girls</option>
                 <option value="music/song5.mp3">Unforgettable</option>
             </select>
-
-            
-            <audio id="bg-music" autoplay loop>
+        
+            <audio id="bg-music" autoplay>
                 <source id="audioSource" src="music/song1.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
-        </div>      
+        
+            <label for="volumeSlider">Volume:</label>
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+        </div>
+          
     </header>
 
 <section class="main-content">

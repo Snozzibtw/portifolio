@@ -105,7 +105,7 @@ header {
 .music-button-container {
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: -60px;
     display: flex;
     align-items: center;
     gap: 0.8rem;
@@ -114,7 +114,7 @@ header {
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    transform: scale(0.85); /* shrink the whole container slightly */
+    transform: scale(0.70);
 }
 
 .music-button {
@@ -150,6 +150,47 @@ header {
     background-repeat: no-repeat;
     background-position: right 1rem center;
     background-size: 1rem;
+    text-align: left;
+}
+
+label[for="volumeSlider"] {
+    font-size: 14px;
+    color: var(--subtext-color);
+}
+
+#volumeSlider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 6rem;
+    height: 8px;
+    border-radius: 5px;
+    outline: none;
+}
+
+#volumeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--button-background);
+    cursor: pointer;
+}
+
+#volumeSlider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--button-background);
+    cursor: pointer;
+}
+
+#volumeSlider::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--button-background);
+    cursor: pointer;
 }
 
 .custom-button:hover {

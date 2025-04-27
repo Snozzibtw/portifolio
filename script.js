@@ -27,23 +27,20 @@ function togglePlayPause() {
 
 function changeSong() {
     const music = document.getElementById('bg-music');
-    const source = document.getElementById('audioSource');
     const selector = document.getElementById('songSelector');
-    
-    source.src = selector.value;
-    music.load();
+
+    music.src = selector.value;
     music.play();
 }
 
 function skipMusic() {
     const music = document.getElementById('bg-music');
     const songSelector = document.getElementById('songSelector');
-    
+
     const currentIndex = songSelector.selectedIndex;
     const nextIndex = (currentIndex + 1) % songSelector.options.length;
 
     songSelector.selectedIndex = nextIndex;
-
     music.src = songSelector.options[nextIndex].value;
     music.play();
 }
@@ -55,14 +52,22 @@ function playbackMusic() {
     const currentIndex = songSelector.selectedIndex;
 
     if (currentIndex == 0) {
-        console.log("No prevoius songs")
-        return; 
+        console.log("No previous songs");
+        return;
     }
 
     const nextIndex = (currentIndex - 1) % songSelector.options.length;
-    
-    songSelector.selectedIndex = nextIndex;
 
+    songSelector.selectedIndex = nextIndex;
     music.src = songSelector.options[nextIndex].value;
     music.play();
-}
+}   
+
+// Volume control function
+const volumeSlider = document.getElementById('volumeSlider');
+const music = document.getElementById('bg-music');
+
+// Update volume when slider value changes
+volumeSlider.addEventListener('input', function() {
+    music.volume = this.value;
+});
