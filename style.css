@@ -370,6 +370,10 @@ label[for="volumeSlider"] {
     }
 }
 
+.projects-wrapper a{
+    text-decoration: none !important;
+}
+
 .projects-wrapper {
     text-align: center;
     background-image: url(images/resized_fullscreen_image.png);
