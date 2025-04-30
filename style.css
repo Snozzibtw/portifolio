@@ -377,7 +377,8 @@ label[for="volumeSlider"] {
 .projects-wrapper {
     text-align: center;
     background-image: url(images/resized_fullscreen_image.png);
-    height: 170vh;
+    height: fit-content;
+    padding-bottom: 8rem;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
